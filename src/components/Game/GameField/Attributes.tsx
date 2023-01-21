@@ -1,7 +1,7 @@
 import type {gameState} from "../Game";
 import React, {useContext} from "react";
 import {WsContext} from "../../../App";
-import {getCookie} from "../../../utils/Cookie";
+import {getCookie, setCookie} from "../../../utils/Cookie";
 import {GameLinkContext} from "../Games";
 
 
@@ -25,6 +25,7 @@ export function Attributes({gameState}: { gameState: gameState }) {
             gameId: gameId,
             userId: token
         }))
+        setCookie("token", token as string, {"max-age": "1200"})
     }
 
     return (

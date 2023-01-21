@@ -15,6 +15,7 @@ export function Voting({gameState}: { gameState: gameState }) {
 
     function handleVoteClick(e: React.MouseEvent<HTMLButtonElement>) {
         const token = getCookie("token")
+        setVote((e.target as HTMLButtonElement).value)
         ws?.send(JSON.stringify({
             method: "vote",
             userId: token,
@@ -31,7 +32,7 @@ export function Voting({gameState}: { gameState: gameState }) {
     return (
         <div className="voting wrapper-center">
             <div className="info game-status">Идет этап голосования</div>
-            //todo вернуть время оставшееся на голосование
+            {/*//todo вернуть время оставшееся на голосование*/}
             {/*<div className="current-move">Осталось времени на голосование {gameState.timeToMove} секунд</div>*/}
             {!gameState.you.outOfGame
                 ?

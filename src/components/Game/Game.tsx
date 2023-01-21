@@ -62,10 +62,6 @@ export function Game() {
 
     let tryCount = 0;
 
-    // useEffect(() => {
-    //     setReadyState(undefined);
-    // }, [])
-
 
     useEffect(() => {
         if (ws !== null) {
@@ -77,8 +73,6 @@ export function Game() {
                 }))
                 ws.onmessage = (message) => {
                     const content = JSON.parse(message.data)
-                    // console.log(content)
-                    console.log("Обновить стейт")
                     if (content.method !== "updateGameState") {
                         return;
                     }
@@ -88,9 +82,6 @@ export function Game() {
         }
     }, [readyState])
 
-    // useEffect(() => {
-    //     console.log(gameState)
-    // }, [gameState])
 
 
     return (

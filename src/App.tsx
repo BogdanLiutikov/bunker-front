@@ -42,15 +42,12 @@ function App() {
         console.log("WebSocket закрыт")
     })
     ws.current.addEventListener('error', () => {
-        console.log("WebSocket ОШИБКА")
+        console.log("WebSocket ошибка")
     })
 
     ws.current.addEventListener('message', (message) => {
-        console.log("Пришли данные")
         const content = JSON.parse(message.data);
         console.log(content)
-        if (content.method === "IWasHereBefore")
-            console.log(content.message)
     })
 
     return (
