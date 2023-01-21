@@ -1,0 +1,283 @@
+:root {
+    --orange: #e08821;
+    --back: #060606
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--back);
+    color: white;
+}
+
+.choose-game > ul {
+    display: flex;
+    gap: min(150px, 10vw);
+}
+
+.choose-game > ul > li{
+    width: max-content;
+}
+
+
+.choose-game > ul > li label {
+    text-align: center;
+}
+
+.info.game-status, .game-status {
+    color: var(--orange);
+    font-size: 2rem;
+}
+
+.outer {
+    height: 100vh;
+    /*width: 100%;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-center {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+div.games {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    font-size: 1.5rem;
+}
+
+.game-field.wrapper-center {
+    padding: 100px 0;
+}
+
+.game.wrapper-center {
+    width: 80%;
+    /*padding: 100px 0px;*/
+}
+
+.attributes {
+    font-size: 1.3rem;
+}
+
+.attributes td button, .attributes td.description, .specials td.description {
+    font-size: 1.2rem;
+}
+
+table.attributes, table.voting-table, .specials {
+    width: 90%;
+}
+
+.player {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.player.outGame {
+    background-color: darkgrey;
+}
+
+.player.inGame {
+    background-color: lightgreen;
+}
+
+.attributes td {
+    height: 5vh;
+    text-align: center;
+    padding: 15px 10px;
+    cursor: default;
+}
+
+.specials {
+    margin: 30px 0;
+}
+
+.specials td {
+    height: 2vh;
+    text-align: center;
+    padding: 0;
+    cursor: default;
+}
+
+.specials td.player {
+    padding: 10px 0;
+}
+
+.attributes td.description {
+    padding: 0;
+    border: solid 1px;
+}
+
+.attributes .description button, .specials button {
+    border-style: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 10px 15px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.specials button {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.attributes .description div {
+    padding: 10px 15px;
+}
+
+.description.opened {
+    background-color: transparent;
+}
+
+.description.opened button {
+    cursor: default;
+}
+
+.description.closed {
+    background-color: darkslategrey;
+}
+
+.description.opened button:disabled {
+    color: inherit;
+}
+
+.games .error, .error {
+    color: red;
+    font-size: 25px;
+}
+
+.current-move {
+    text-align: center;
+}
+
+.voting-table {
+    /*margin: 30px 0;*/
+    font-size: 1.3rem;
+}
+
+.voting-table > ul {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 25px;
+}
+
+.voting-table td button {
+    border: solid black 1px;
+    background-color: transparent;
+    margin: 0;
+    padding: 10px 15px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.voting-table button:disabled {
+    background-color: blueviolet;
+    color: inherit;
+    cursor: default;
+}
+
+.info, .special-using {
+    font-size: 1.2rem;
+    color: blueviolet;
+}
+
+.invite-link {
+    max-width: 60%;
+    text-align: center;
+}
+
+.admin.wrapper-center {
+    gap: 2vh;
+}
+
+div.optionPicker {
+    margin-bottom: 20px;
+}
+
+div.optionPicker:last-child {
+    margin-bottom: 0;
+}
+
+.optionPicker ul.vertical, .optionPicker ul.horizontal {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.optionPicker ul.horizontal {
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+.optionPicker ul.vertical {
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.pickers form button {
+    color: white;
+    background-color: var(--back);
+}
+
+.cataclysm, .bunker {
+    color: var(--orange);
+    font-size: 1.5rem;
+}
+
+.cataclysm-desc, .bunker-desc {
+    font-size: 1rem;
+    font-weight: lighter;
+    line-height: 1.4rem;
+}
+
+.bunker-desc span {
+    font-weight: normal;
+}
+
+.bunker-desc span::after {
+    content: ":";
+}
+
+.bunker-desc ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.specials td.description {
+    border: 1px solid white;
+    border-radius: 0;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+}
+
+.specials td.description button {
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1100px) {
+    html {
+        font-size: 14px;
+    }
+
+    .attributes thead td {
+        word-wrap: normal;
+    }
+}
+
+.waiting .players ul {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}

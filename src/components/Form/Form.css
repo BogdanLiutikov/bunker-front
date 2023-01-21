@@ -1,0 +1,22 @@
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form > ul > li {
+    margin-bottom: 30px;
+}
+
+.form > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
